@@ -26,7 +26,9 @@ class URLify {
     
     func replaceSpaces(userInput:String)->String{
         
-        
+        for characters in userInput.indices {
+            
+        }
 
         return userInput
     }
