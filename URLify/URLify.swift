@@ -15,7 +15,7 @@ class URLify {
     func startingPoint(){
         
         print("Please enter a string")
-        var userInput = inputOutput.getInput()
+        let userInput = inputOutput.getInput()
         
         let finalOutput = replaceSpaces(userInput: userInput)
         
@@ -25,11 +25,17 @@ class URLify {
     }
     
     func replaceSpaces(userInput:String)->String{
+
+        var newString = ""
         
         for characters in userInput.indices {
-            
+            if userInput[characters] == " "{
+                newString.append("%20")
+            }else{
+                newString.append(userInput[characters])
+            }
         }
 
-        return userInput
+        return newString
     }
 }
