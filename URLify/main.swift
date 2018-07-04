@@ -8,5 +8,9 @@
 
 import Foundation
 
-print("Hello, World!")
+print("This program will 'URLify' a string, inserting %20 for every space")
+
+let urlification = URLify()
+
+urlification.startingPoint()
 
